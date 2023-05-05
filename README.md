@@ -9,3 +9,9 @@ API :</br>
 Client:</br>
     - 5554 (https)</br>
     - 5004</br>
+
+<h3>Running in VSCode</h3>
+<ul>
+    <li>ctrl + shift + p in root, .NET: Generate Assets for Build and Debug</li>
+    
+</ul> 
