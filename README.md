@@ -29,7 +29,7 @@
 <ul>
     <li><em>dotnet new web -lang "c# -n "API" -f "net6.0" -o .\API -d -v diag</em> (empty ASP.NET Web Project)</li>
     <li><em>dotnet new classlib -lang c# -n DataAccess -f net6.0 -o .\DataAccess -d -v diag</em> (.NET 6 Class Lib)</li>
-    <li><em>dotnet add API/API.csproj reference DataAccess/DataAccess.csproj</li>
+    <li><em>dotnet add API/API.csproj reference DataAccess/DataAccess.csproj</em></li>
 </ul>
 <h3>Adding Dependencies</h3>
 - Nuget Gallery .NET CLI:
