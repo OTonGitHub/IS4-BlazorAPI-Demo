@@ -23,6 +23,7 @@
     <li>C# (Omnisharp)</li>
     <li>XML (Red Hat)</li>
 </ul>
+</ul>
 <h2>Dotnet Commands</h2>
 <h3>Solution Setup</h3>
 <ul>
