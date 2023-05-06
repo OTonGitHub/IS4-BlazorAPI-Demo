@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using DataAccess.Entities;
 
 namespace DataAccess.Data;
 public class AppDbContext : DbContext {
@@ -6,4 +7,5 @@ public class AppDbContext : DbContext {
         : base(options)
     {}
     
+    public DbSet<Restaurant> Restaurants {get; set;}
 }
