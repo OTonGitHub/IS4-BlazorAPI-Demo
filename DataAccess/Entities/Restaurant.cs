@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema; // for column data annotatio
 
 namespace DataAccess.Entities;
 
-public class Restraurants {
+public class Restaurant {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     // by convetion Id or <EntityName>Id these annotations will be added, but explicit is recommended
