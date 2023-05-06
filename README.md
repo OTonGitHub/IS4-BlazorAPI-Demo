@@ -15,9 +15,13 @@
     <li>5554 (https)</li>
     <li>5004</li>
 </ul>
-<h3>Running in VSCode</h3>
+<h2>Running in VSCode</h2>
 <ul>
     <li>ctrl + shift + p in root, .NET: Generate Assets for Build and Debug</li>
+- Extensions:
+<ul>
+    <li>C# (Omnisharp)</li>
+    <li>XML (Red Hat)</li>
 </ul>
 <h2>Dotnet Commands</h2>
 <h3>Solution Setup</h3>
