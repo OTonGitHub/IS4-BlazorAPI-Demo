@@ -21,10 +21,14 @@ Client:</br>
     <li><em>dotnet add API/API.csproj reference DataAccess/DataAccess.csproj</li>
 </ul>
 <h2>Adding Dependencies</h2>
-- Nuget Gallery .NET CLi
+- Nuget Gallery .NET CLI:
 <ul>
-    <li><em>dotnet add API/API.csproj package Microsoft.EntityFrameworkCore.SqlServer</li>
-    <li><em>dotnet add API/API.csproj package Microsoft.EntityFrameworkCore.Tools</li>
-    <li><em>dotnet add DataAccess/DataAccess.csproj package Microsoft.EntityFrameworkCore.SqlServer</li>
-    <li><em>dotnet add DataAccess/DataAccess.csproj package Microsoft.EntityFrameworkCore.Tools</li>
+    <li><em>dotnet add API/API.csproj package Microsoft.EntityFrameworkCore.SqlServer</em></li>
+    <li><em>dotnet add API/API.csproj package Microsoft.EntityFrameworkCore.Tools</em></li>
+    <li><em>dotnet add DataAccess/DataAccess.csproj package Microsoft.EntityFrameworkCore.SqlServer</em></li>
+    <li><em>dotnet add DataAccess/DataAccess.csproj package Microsoft.EntityFrameworkCore.Tools</em></li>
+</ul>
+- Project References:
+<ul>
+    <li><em>dotnet add API/API.csproj reference DataAccess/DataAccess.csproj</em></li>
 </ul>
