@@ -40,6 +40,12 @@ builder.Services.AddIdentityServer()
     .AddDeveloperSigningCredential();
 
 var app = builder.Build();
+app.UseStaticFiles(); // contians scss files // ?
+app.UseRouting(); // ?
 app.UseIdentityServer();
+app.UseAuthorization(); // after UseIdentityServer() // ?
+app.UseEndpoints(endpoints => {
+    endpoints.MapDefaultControllerRoute(); // ?
+});
 
 app.Run();
