@@ -1,6 +1,6 @@
 using IdentityServer4.Models;
 
-namespace Server;
+namespace I4Server;
 public class Config
 {
     public static IEnumerable<IdentityResource> IdentityResources =>

@@ -1,10 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using I4Server.Data;
 using Microsoft.AspNetCore.Identity;
+using I4Server;
+
+var seed = args.Contains("/seed");
+if (seed) {
+    args = args.Except(new [] { "/seed" }).ToArray();
+}
 
 var builder = WebApplication.CreateBuilder(args);
+
 var assembly = typeof(Program).Assembly.GetName().Name; // get name of this/current assembly
 var defaultConnString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+if (seed)
+{
+    SeedData.EnsureSeedData(defaultConnString);
+}
 
 builder.Services.AddDbContext<AspNetIdentityDbContext>(options =>
     options.UseSqlServer(defaultConnString,
