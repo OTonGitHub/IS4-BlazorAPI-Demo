@@ -31,6 +31,8 @@
     <li><em>dotnet new classlib -lang c# -n DataAccess -f net6.0 -o .\DataAccess -d -v diag</em> (.NET 6 Class Lib)</li>
     <li><em>dotnet add API/API.csproj reference DataAccess/DataAccess.csproj</em></li>
     <li><em>dotnet new web -lang "C#" -n "I4Server" -f "net6.0"</em></li>
+    <li><em>dotnet sln add .\I4Server\I4Server.csproj</em></li>
+    <li><em>dotnet restore && dotnet clean</em></li>
 </ul>
 <h3>Adding Dependencies</h3>
 - Nuget Gallery .NET CLI:
@@ -58,6 +60,7 @@
     <li>has issue with SQL Server self signed ceritificate, currently uses <strong>TrustServerCertificate=True</strong> in connection string to override it</li>
     <li>Unable to set <strong>launchUrl</strong> in launchSettings.json for either kestrel or IIS, may need to look into WebHostBuilder</li>
     <li>Need a way to set and forget multiple start up projects for the vscode launcher or global config, instead of using the cli every time</li>
+    <li>Need to update all packages to latest version globally</li>
 </ul>
 <h2>Notes</h2>
 <ul>
