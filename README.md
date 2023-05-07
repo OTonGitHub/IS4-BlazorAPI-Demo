@@ -30,6 +30,7 @@
     <li><em>dotnet new web -lang "c# -n "API" -f "net6.0" -o .\API -d -v diag</em> (empty ASP.NET Web Project)</li>
     <li><em>dotnet new classlib -lang c# -n DataAccess -f net6.0 -o .\DataAccess -d -v diag</em> (.NET 6 Class Lib)</li>
     <li><em>dotnet add API/API.csproj reference DataAccess/DataAccess.csproj</em></li>
+    <li><em>dotnet new web -lang "C#" -n "I4Server" -f "net6.0"</em></li>
 </ul>
 <h3>Adding Dependencies</h3>
 - Nuget Gallery .NET CLI:
@@ -38,6 +39,7 @@
     <li><em>dotnet add API/API.csproj package Microsoft.EntityFrameworkCore.Tools</em></li>
     <li><em>dotnet add DataAccess/DataAccess.csproj package Microsoft.EntityFrameworkCore.SqlServer</em></li>
     <li><em>dotnet add DataAccess/DataAccess.csproj package Microsoft.EntityFrameworkCore.Tools</em></li>
+    - For I4Server project, all packages are registered in the .csproj file, run <em>dotnet restore</em> on them
 </ul>
 - Project References:
 <ul>
@@ -55,9 +57,12 @@
 <ul>
     <li>has issue with SQL Server self signed ceritificate, currently uses <strong>TrustServerCertificate=True</strong> in connection string to override it</li>
     <li>Unable to set <strong>launchUrl</strong> in launchSettings.json for either kestrel or IIS, may need to look into WebHostBuilder</li>
+    <li>Need a way to set and forget multiple start up projects for the vscode launcher or global config, instead of using the cli every time</li>
 </ul>
 <h2>Notes</h2>
 <ul>
     <li>Even though the IRestaurantService is injected and recognized inside the API controller, the implementation is decided in runtime, in order to register the implementation, configure this in the program.cs by adding <strong>builder.services.AddScoped<TService, TImplementation>()</strong>.</li>
     <li>You have to add this just buefore the builder.build()</li>
+    <li>In the API Controller, default get method does not have to be called by name if route is not mentioned but will be the default when visiting the api/[controller]</li>
+    <li>creating new projects with dotnet new, consider implications of using either --no-https or --no-http as well as the default behaviour.</li>
 </ul>
