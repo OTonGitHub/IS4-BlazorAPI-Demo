@@ -33,7 +33,9 @@
     <li><em>dotnet new web -lang "C#" -n "I4Server" -f "net6.0"</em></li>
     <li><em>dotnet sln add .\I4Server\I4Server.csproj</em></li>
     <li><em>dotnet new blazorserver -n "BlazorClient" -f "net6.0" -o .\BlazorClient --auth None</em></li>
-    <li><em>dotnet add .\BlazorClient\BlazorClient.csproj reference .\API\API.csproj </em></li> 
+    <li><em>dotnet add .\BlazorClient\BlazorClient.csproj reference .\API\API.csproj</em></li> 
+    <li><em>dotnet sln add .\BlazorClient\BlazorClient.csproj</em></li> 
+    <li><em>dotnet sln add .\DataAccess\DataAccess.csproj</em></li> 
     <li><em>dotnet restore && dotnet clean</em></li>
 </ul>
 <h3>Adding Dependencies</h3>
