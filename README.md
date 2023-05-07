@@ -54,6 +54,7 @@
 <h2>Issues</h2>
 <ul>
     <li>has issue with SQL Server self signed ceritificate, currently uses <strong>TrustServerCertificate=True</strong> in connection string to override it</li>
+    <li>Unable to set <strong>launchUrl</strong> in launchSettings.json for either kestrel or IIS, may need to look into WebHostBuilder</li>
 </ul>
 <h2>Notes</h2>
 <ul>
