@@ -4,7 +4,7 @@ using API.Services;
 namespace API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]s")]
 public class RestaurantController : ControllerBase {
     private readonly IRestaurantService _restaurantService;
 
@@ -13,8 +13,8 @@ public class RestaurantController : ControllerBase {
     }
 
     [HttpGet]
-    [Route("List")]
-    public async Task<IActionResult> List(){
+    // [Route("ListAll")]
+    public async Task<IActionResult> ListAll(){
         var restaurants = await _restaurantService.List();
         return Ok(restaurants);
     }
