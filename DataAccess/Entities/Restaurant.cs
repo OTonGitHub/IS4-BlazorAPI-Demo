@@ -13,8 +13,8 @@ public class Restaurant {
     public string Name { get; set; }
 
     [Column(TypeName = "varchar(200)")]
-    public string location { get; set; }
+    public string Location { get; set; }
 
     [Column(TypeName =  "varchar(200)")]
-    public string rating {get; set;}
+    public string Rating {get; set;}
 }
