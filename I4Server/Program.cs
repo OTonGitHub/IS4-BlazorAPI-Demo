@@ -6,6 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 var assembly = typeof(Program).Assembly.GetName().Name; // get name of this/current assembly
 var defaultConnString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+builder.Services.AddDbContext<AspNetIdentityDbContext>(options =>
+    options.UseSqlServer(defaultConnString,
+        b => b.MigrationsAssembly(assembly)));
+
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<AspNetIdentityDbContext>();
 
