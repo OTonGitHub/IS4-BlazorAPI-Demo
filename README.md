@@ -58,6 +58,8 @@
     <li><em>dotnet ef migrations add InitialIdentityServer4Migration --project .\I4Server\I4Server.csproj -c configurationDbContext --verbose</em></li>
     <li><em>dotnet ef database update --project .\I4Server\I4Server.csproj -c PersistedGrantDbContext</em></li>
     <li><em>dotnet ef database update --project .\I4Server\I4Server.csproj -c ConfigurationDbContext</em></li>
+    <li><em>dotnet ef migrations add InitialAspNetIdentityMigration --project .\I4Server\I4Server.csproj -c AspNetIdentityDbContext</em></li>
+    <li><em>dotnet ef database update --project .\I4Server\I4Server.csproj -c AspNetIdentityDbContext</em></li>
 </ul>
 <h2>Issues</h2>
 <ul>
