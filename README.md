@@ -54,6 +54,10 @@
     <li><em>dotnet tool install --local dotnet-ef --version 7.0.5</li>
     <li><em>dotnet ef migrations add CreateRestaurantTable --startup-project API/API.csproj --project DataAccess/DataAccess.csproj --context AppDbContext --verbose</em></li>
     <li><em>dotnet ef database update --project DataAccess/DataAccess.csproj -s API/API.csproj</em></li>
+    <li><em>dotnet ef migrations add InitialIdentityServer4Migration --project .\I4Server\I4Server.csproj --context PersistedGrantDbContext --verbose</em></li>
+    <li><em>dotnet ef migrations add InitialIdentityServer4Migration --project .\I4Server\I4Server.csproj -c configurationDbContext --verbose</em></li>
+    <li><em>dotnet ef database update --project .\I4Server\I4Server.csproj -c PersistedGrantDbContext</em></li>
+    <li><em>dotnet ef database update --project .\I4Server\I4Server.csproj -c ConfigurationDbContext</em></li>
 </ul>
 <h2>Issues</h2>
 <ul>
@@ -68,4 +72,5 @@
     <li>You have to add this just buefore the builder.build()</li>
     <li>In the API Controller, default get method does not have to be called by name if route is not mentioned but will be the default when visiting the api/[controller]</li>
     <li>creating new projects with dotnet new, consider implications of using either --no-https or --no-http as well as the default behaviour.</li>
+    <li>tempkey.jwk is generated in root of I4Server project as development sign in for IS4.</li>
 </ul>
