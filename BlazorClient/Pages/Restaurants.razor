@@ -1,11 +1,11 @@
-@page "/restaurants"
+﻿@page "/restaurants"
 
 <h3>Restaurants</h3>
 
 <div class="row">
-    @if (Restaurants.Any())
+    @if (restaurants.Any())
     {
-        @foreach (var restaurant in Restaurants)
+        @foreach (var restaurant in restaurants)
         {
             <div class="col-6 col-sm-12 col-md-6 col-lg-4 col-xl-4 mh-25 mb-4">
                 <div class="card shadow-sm rounded">
@@ -22,6 +22,6 @@
     }
     else
     {
-        <p>No restaurant available</p>
+        <p>No restaurants available</p>
     }
 </div>
