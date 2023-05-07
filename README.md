@@ -55,3 +55,8 @@
 <ul>
     <li>has issue with SQL Server self signed ceritificate, currently uses <strong>TrustServerCertificate=True</strong> in connection string to override it</li>
 </ul>
+<h2>Notes</h2>
+<ul>
+    <li>Even though the IRestaurantService is injected and recognized inside the API controller, the implementation is decided in runtime, in order to register the implementation, configure this in the program.cs by adding <strong>builder.services.AddScoped<TService, TImplementation>()</strong>.</li>
+    <li>You have to add this just buefore the builder.build()</li>
+</ul>
