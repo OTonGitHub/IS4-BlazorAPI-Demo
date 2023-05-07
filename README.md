@@ -43,10 +43,15 @@
 <ul>
     <li><em>dotnet add API/API.csproj reference DataAccess/DataAccess.csproj</em></li>
 </ul>
+- On fresh build, run <strong>dotnet restore</strong>, for packages.
 <h3>EF Core Migrations</h3>
 <ul>
     <li><em>dotnet new tool-manifest</li>
     <li><em>dotnet tool install --local dotnet-ef --version 7.0.5</li>
     <li><em>dotnet ef migrations add CreateRestaurantTable --startup-project API/API.csproj --project DataAccess/DataAccess.csproj --context AppDbContext --verbose</em></li>
     <li><em>dotnet ef database update --project DataAccess/DataAccess.csproj -s API/API.csproj</em></li>
+</ul>
+<h2>Issues</h2>
+<ul>
+    <li>has issue with SQL Server self signed ceritificate, currently uses <strong>TrustServerCertificate=True</strong> in connection string to override it</li>
 </ul>
