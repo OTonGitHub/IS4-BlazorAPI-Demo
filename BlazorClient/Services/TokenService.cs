@@ -13,6 +13,7 @@ public class TokenService : ITokenService
     {
         this.identityServerSettings = identityServerSettings;
         httpClient = new HttpClient();
+        // GetDiscoveryDocumentAsync(): Identiy.Model extension method on HttpClient
         discoveryDocument = httpClient.GetDiscoveryDocumentAsync(this.identityServerSettings.Value.DiscoveryUrl).Result;
 
         if (discoveryDocument.IsError)
