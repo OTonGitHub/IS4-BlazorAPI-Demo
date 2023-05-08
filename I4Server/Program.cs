@@ -39,13 +39,16 @@ builder.Services.AddIdentityServer()
     })
     .AddDeveloperSigningCredential();
 
+builder.Services.AddControllersWithViews();
+
 var app = builder.Build();
 app.UseStaticFiles(); // contians scss files // ?
 app.UseRouting(); // ?
 app.UseIdentityServer();
-// app.UseAuthorization(); // after UseIdentityServer() // ?
-// app.UseEndpoints(endpoints => {
-//     endpoints.MapDefaultControllerRoute(); // ?
-// });
+app.UseAuthorization(); // after UseIdentityServer() // ?
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapDefaultControllerRoute(); // ?
+});
 
 app.Run();
